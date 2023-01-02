@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(BellBlock.class)
-public class BellBlockMixin {
+public abstract class BellBlockMixin {
     @Inject(
             method =
                     //#if MC>=11700

@@ -1,7 +1,6 @@
 package club.mcams.carpet.logging;
 
 import carpet.logging.Logger;
-
 public class AmsCarpetLoggerRegistry {
 
     public static void registerLoggers() {
