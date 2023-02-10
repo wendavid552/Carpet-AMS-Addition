@@ -1,4 +1,4 @@
-package club.mcams.carpet.command;
+package club.mcams.carpet.commands;
 
 import carpet.utils.Messenger;
 import club.mcams.carpet.AmsServerSettings;
@@ -13,7 +13,7 @@ import static com.mojang.brigadier.arguments.BoolArgumentType.getBool;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
-public class AmsCarpetCommandRegistry {
+public class chunkloadingCommandRegistry {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(literal("chunkloading")
                 .requires((player) -> CommandHelper.canUseCommand(player, AmsServerSettings.commandChunkLoading))
