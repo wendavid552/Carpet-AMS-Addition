@@ -27,6 +27,9 @@ public class CollectBlocksAndDamageEntitiesMixin {
             Blocks.BEDROCK, AmsServerSettings.blowUpBedRock,
             Blocks.OBSIDIAN, AmsServerSettings.blowUpObsidian,
             Blocks.CRYING_OBSIDIAN, AmsServerSettings.blowUpCryingObsidian
+            //#if MC>=11900
+            //$$ ,Blocks.REINFORCED_DEEPSLATE, AmsServerSettings.blowUpReinforcedDeepslate
+            //#endif
     );
     @Shadow
     @Final

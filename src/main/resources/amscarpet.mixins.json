@@ -19,7 +19,6 @@
     "rule.boneBlockUpdateSuppressor.NeighborUpdateMixin",
     "rule.breakableBlock.AbstractBlockStateMixin",
     "rule.blowUpBlocks.CollectBlocksAndDamageEntitiesMixin",
-    "rule.blowUpEverything.GetBlastResistanceMixin",
     "rule.extinguishedCampfire.GetPlacementStateMixin",
     "rule.fakePeace.AbstractBlockStateMixin",
     "rule.movableBlocks.PistonBlockMixin",

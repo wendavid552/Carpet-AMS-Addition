@@ -99,7 +99,7 @@ public class AmsServerSettings {
 
     @Rule(
             //#if MC<11900
-            desc = "Fix memory leak in living entity brain",
+            desc = "Fix MC-260605: memory leak in living entity brain",
             category = {AMS, BUGFIX}
             //#else
             //$$ categories = {AMS, BUGFIX}
@@ -204,16 +204,6 @@ public class AmsServerSettings {
 
     @Rule(
             //#if MC<11900
-            desc = "Set all blocks BlastResistance to 0",
-            category = {AMS, FEATURE, SURVIVAL, TNT}
-            //#else
-            //$$ categories = {AMS, FEATURE, SURVIVAL, TNT}
-            //#endif
-    )
-    public static boolean blowUpEverything = false;
-
-    @Rule(
-            //#if MC<11900
             desc = "Share villagers discount to all players",
             category = {AMS, FEATURE, SURVIVAL}
             //#else
@@ -282,7 +272,7 @@ public class AmsServerSettings {
 
     //#if MC>11800
     //$$    @Rule(categories = {AMS, FEATURE, SURVIVAL, TNT})
-    //$$    public static boolean blowUpReinforcedDeepslate = false;
+    //$$    public static Float blowUpReinforcedDeepslate = Blocks.REINFORCED_DEEPSLATE.getBlastResistance();
     //#endif
 
     @Rule(

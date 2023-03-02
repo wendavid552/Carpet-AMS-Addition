@@ -155,16 +155,6 @@
 - 分类: `AMS` , `FEATURE` , `SURVIVAL`
 
 
-## 炸毁所有方块(blowUpEverything)
-
-开启后，所有方块的爆炸抗性均为 0。
-
-- 类型: `boolean`
-- 默认值: `false`
-- 参考选项: `false` , `true`
-- 分类: `AMS` , `FEATURE` , `SURVIVAL` , `TNT`
-
-
 ## 炸毁黑曜石(blowUpObsidian)
 
 开启后，爆炸将能够摧毁黑曜石。
