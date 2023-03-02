@@ -15,7 +15,6 @@
     "rule.livingEntityBrainLeakFix.IBrainMixin",
     "rule.optimizedDragonRespawn.BlockPatternTestTransformInvoker",
     "rule.optimizedDragonRespawn.EnderDragonFightMixin",
-    "rule.blockChunkLoader.NoteBlockProMixin",
     "rule.blockChunkLoader.PistonBlockMixin",
     "rule.boneBlockUpdateSuppressor.NeighborUpdateMixin",
     "rule.breakableBlock.AbstractBlockStateMixin",

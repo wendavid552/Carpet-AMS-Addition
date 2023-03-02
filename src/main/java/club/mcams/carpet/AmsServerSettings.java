@@ -1,10 +1,12 @@
 package club.mcams.carpet;
 
-import carpet.settings.Rule;
 import club.mcams.carpet.util.recipes.CraftingRule;
-import net.minecraft.block.Blocks;
 
 import static club.mcams.carpet.settings.AmsRuleCategory.*;
+
+import net.minecraft.block.Blocks;
+//#if MC<11900
+import carpet.settings.Rule;
 //#else
 //$$ import carpet.api.settings.Rule;
 //#endif
@@ -455,3 +457,4 @@ public class AmsServerSettings {
     )
     public static boolean betterCraftableDispenser = false;
 }
+

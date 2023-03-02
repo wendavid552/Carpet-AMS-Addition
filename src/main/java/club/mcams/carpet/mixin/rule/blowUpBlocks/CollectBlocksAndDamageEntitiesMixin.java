@@ -23,7 +23,7 @@ import java.util.Optional;
 @Mixin(value = Explosion.class, priority = 888)
 public class CollectBlocksAndDamageEntitiesMixin {
 
-    final static Map<Block, Float> blockBlast = Map.of(
+    final static private Map<Block, Float> blockBlast = Map.of(
             Blocks.BEDROCK, AmsServerSettings.blowUpBedRock,
             Blocks.OBSIDIAN, AmsServerSettings.blowUpObsidian,
             Blocks.CRYING_OBSIDIAN, AmsServerSettings.blowUpCryingObsidian
