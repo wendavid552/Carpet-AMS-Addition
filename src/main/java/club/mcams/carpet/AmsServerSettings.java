@@ -1,7 +1,12 @@
 package club.mcams.carpet;
 
+import carpet.settings.ParsedRule;
 import carpet.settings.Rule;
+import carpet.settings.Validator;
 import club.mcams.carpet.util.recipes.CraftingRule;
+import net.minecraft.server.command.ServerCommandSource;
+
+import java.util.List;
 
 import static carpet.settings.RuleCategory.*;
 
@@ -9,10 +14,9 @@ import static carpet.settings.RuleCategory.*;
  * Here is your example Settings class you can plug to use carpetmod /carpet settings command
  */
 
-@SuppressWarnings({"CanBeFinal", "removal"})
+@SuppressWarnings({"removal"})
 public class AmsServerSettings {
     public static final String AMS = "AMS";
-    public static final String CRAFTING = "CRAFTING";
 
     @Rule(
             desc = "Enabling making super bows with both infinite and mending enchants",
@@ -64,6 +68,12 @@ public class AmsServerSettings {
     public static boolean optimizedDragonRespawn = false;
 
     @Rule(
+            desc = "Fix memory leak in living entity brain",
+            category = {AMS, BUGFIX}
+    )
+    public static boolean livingEntityBrainLeakFix = true;
+
+    @Rule(
             desc = "Load nearby 3x3 chunks for 15 seconds when a note block is triggered",
             category = {AMS, FEATURE}
     )
@@ -75,23 +85,10 @@ public class AmsServerSettings {
     public static boolean bellBlockChunkLoader = false;
     @Rule(
             desc = "Load nearby 3x3 chunks for 15 seconds when a piston with a bone block at its top extends",
-            category = {AMS, FEATURE}
+            category = {AMS, FEATURE},
+            extra={"The loading chunk is determined by the head of the piston"}
     )
     public static boolean pistonBlockChunkLoader = false;
-
-    @CraftingRule(recipes = "enchanted_golden_apples.json")
-    @Rule(
-            desc = "Enchanted Golden Apples can be crafted with 8 Gold Blocks again",
-            category = {CRAFTING, SURVIVAL, AMS}
-    )
-    public static boolean craftableEnchantedGoldenApples = false;
-
-    @CraftingRule(recipes = "bone_block.json")
-    @Rule(
-            desc = "Use nine bones to crafted three bone_blocks",
-            category = {CRAFTING, SURVIVAL, AMS}
-    )
-    public static boolean betterCraftableBoneBlock = false;
 
     @Rule(
             desc = "Control chunk loading for players at any gamemodes",
@@ -99,4 +96,9 @@ public class AmsServerSettings {
     )
     public static String commandChunkLoading = "false";
 
+    @Rule(
+            desc = "Coarse dirt will turn to sand when placing directly above a block that has pointed dripstone underneath in hot biomes",
+            category = {AMS, FEATURE, SURVIVAL}
+    )
+    public static boolean coarseDirtDriedToSand = false;
 }
