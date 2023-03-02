@@ -105,7 +105,7 @@ public class AmsServerSettings {
             //$$ categories = {AMS, BUGFIX}
             //#endif
     )
-    public static boolean livingEntityBrainLeakFix = true;
+    public static boolean livingEntityBrainLeakFix = false;
 
     @Rule(
             //#if MC<11900

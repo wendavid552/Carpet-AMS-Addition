@@ -40,7 +40,6 @@
 
 - 分类: `AMS` , `FEATURE` , `SURVIVAL`
 
-
 ## 龙战优化 (optimizedDragonRespawn)
 
 大幅度优化了龙战判定代码的性能表现，为基于末地祭坛设计的末地石农场提供性能优化。注意：本选项开启后可能影响原版特性。
@@ -50,6 +49,25 @@
 - 参考选项: `false` , `true`
 - 分类: `AMS` , `OPTIMIZATION`
 
+## 砂土再生沙子(coarseDirtDriedToSand)
+
+炎热群系下放在滴水石锥上的砂土有概率变干成沙子，具体实现与1.19+的泥土一致
+
+- 类型: `boolean`
+- 默认值: `false`
+- 参考选项: `false`, `true`
+- 分类: `AMS`, `FEATURE`, `SURVIVAL`
+
+## 修复实体ai引起的内存泄露(livingEntityBrainLeakFix)
+
+修复MC-260605: 实体ai死后的brain没有主动清空。在一定以疣猪兽为例的刷怪流下会逐渐增加内存占用。
+
+<该规则从 1.19.4-pre3 移植>
+
+- 类型: `boolean`
+- 默认值: `false`
+- 参考选项: `false`, `true`
+- 分类: `AMS`, `BUGFIX`
 
 ### 区块加载控制 (commandChunkLoading)
 
@@ -143,56 +161,54 @@
 - 参考选项: `false` , `true`
 - 分类: `AMS` , `FEATURE` , `SURVIVAL`
 
-
 ## 伪和平(fakePeace)
 
-开启后，所有生物不会生成，但不影响困难难度（类似伪和平）。
-> 用于在镜像服快速的实现不刷怪物且不切换难度。
+开启后，所有生物都不会生成。
+> 用于实现关闭被动生物在内的生物生成
 
 - 类型: `boolean`
 - 默认值: `false`
 - 参考选项: `false` , `true`
 - 分类: `AMS` , `FEATURE` , `SURVIVAL`
 
-
 ## 炸毁黑曜石(blowUpObsidian)
 
-开启后，爆炸将能够摧毁黑曜石。
+可以自行调节黑曜石的爆炸抗性。
 
-- 类型: `boolean`
-- 默认值: `false`
-- 参考选项: `false` , `true`
+- 类型: `float`
+- 默认值: `1200`
+- 参考选项: `1200` , `0`
 - 分类: `AMS` , `FEATURE` , `SURVIVAL` , `TNT`
 
 
 ## 炸毁哭泣的黑曜石(blowUpCryingObsidian)
 
-开启后，爆炸将能够摧毁哭泣的黑曜石。
+可以自行调节哭泣的黑曜石的爆炸抗性。
 
-- 类型: `boolean`
-- 默认值: `false`
-- 参考选项: `false` , `true`
+- 类型: `float`
+- 默认值: `1200`
+- 参考选项: `1200` , `true`
 - 分类: `AMS` , `FEATURE` , `SURVIVAL` , `TNT`
 
 
 ## 炸毁基岩(blowUpBedRock)
 
-开启后，爆炸将能够摧毁基岩。
+可以自行调节基岩的爆炸抗性。
 
-- 类型: `boolean`
-- 默认值: `false`
-- 参考选项: `false` , `true`
+- 类型: `float`
+- 默认值: `3600000`
+- 参考选项: `3600000` , `true`
 - 分类: `AMS` , `FEATURE` , `SURVIVAL` , `TNT`
 
 
 ## 炸毁强化深板岩(blowUpReinforcedDeepslate)
 
-开启后，爆炸将能够摧毁强化深板岩。
+可以自行调节强化深板岩的爆炸抗性。
 <该规则 `Minecraft Version >= 1.19` 可用>
 
-- 类型: `boolean`
-- 默认值: `false`
-- 参考选项: `false` , `true`
+- 类型: `float`
+- 默认值: `1200`
+- 参考选项: `1200` , `true`
 - 分类: `AMS` , `FEATURE` , `SURVIVAL` , `TNT`
 
 
