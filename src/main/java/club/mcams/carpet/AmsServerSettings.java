@@ -1,9 +1,10 @@
 package club.mcams.carpet;
 
-import club.mcams.carpet.util.recipes.CraftingRule;
-import static club.mcams.carpet.settings.AmsRuleCategory.*;
-//#if MC<11900
 import carpet.settings.Rule;
+import club.mcams.carpet.util.recipes.CraftingRule;
+import net.minecraft.block.Blocks;
+
+import static club.mcams.carpet.settings.AmsRuleCategory.*;
 //#else
 //$$ import carpet.api.settings.Rule;
 //#endif
@@ -265,7 +266,7 @@ public class AmsServerSettings {
             //$$ categories = {AMS, FEATURE, SURVIVAL, TNT}
             //#endif
     )
-    public static boolean blowUpObsidian = false;
+    public static Float blowUpObsidian = Blocks.OBSIDIAN.getBlastResistance();
 
     @Rule(
             //#if MC<11900
@@ -275,7 +276,7 @@ public class AmsServerSettings {
             //$$ categories = {AMS, FEATURE, SURVIVAL, TNT}
             //#endif
     )
-    public static boolean blowUpCryingObsidian = false;
+    public static Float blowUpCryingObsidian = Blocks.CRYING_OBSIDIAN.getBlastResistance();
 
     //#if MC>11800
     //$$    @Rule(categories = {AMS, FEATURE, SURVIVAL, TNT})
@@ -290,7 +291,7 @@ public class AmsServerSettings {
             //$$ categories = {AMS, FEATURE, SURVIVAL, TNT}
             //#endif
     )
-    public static boolean blowUpBedRock = false;
+    public static Float blowUpBedRock = Blocks.BEDROCK.getBlastResistance();
 
     /**
      * 可移动方块规则
